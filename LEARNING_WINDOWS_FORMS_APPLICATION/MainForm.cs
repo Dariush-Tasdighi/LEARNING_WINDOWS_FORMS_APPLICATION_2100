@@ -34,18 +34,18 @@
 			pathNameTextBox.Text =
 				pathNameTextBox.Text.Trim();
 
-			System.IO.StreamWriter oStream = null;
+			System.IO.StreamWriter stream = null;
 
 			try
 			{
-				oStream =
+				stream =
 					new System.IO.StreamWriter
 						(path: pathNameTextBox.Text, append: false, encoding: System.Text.Encoding.UTF8);
 
-				oStream.Write(textTextBox.Text);
+				stream.Write(textTextBox.Text);
 
 				//oStream.Flush();
-				oStream.Close();
+				stream.Close();
 
 				System.Windows.Forms.MessageBox.Show
 					(text: "فایل متنی با موفقیت ایجاد یا ذخیره گردید.",
@@ -62,10 +62,10 @@
 			}
 			finally
 			{
-				if (oStream != null)
+				if (stream != null)
 				{
-					oStream.Dispose();
-					oStream = null;
+					stream.Dispose();
+					stream = null;
 				}
 			}
 		}
@@ -109,17 +109,17 @@
 				return;
 			}
 
-			System.IO.StreamReader oStream = null;
+			System.IO.StreamReader stream = null;
 
 			try
 			{
-				oStream =
+				stream =
 					new System.IO.StreamReader
 						(path: pathNameTextBox.Text, encoding: System.Text.Encoding.UTF8);
 
-				textTextBox.Text = oStream.ReadToEnd();
+				textTextBox.Text = stream.ReadToEnd();
 
-				oStream.Close();
+				stream.Close();
 
 				System.Windows.Forms.MessageBox.Show
 					(text: "فایل متنی با موفقیت بارگذاری گردید.",
@@ -136,10 +136,10 @@
 			}
 			finally
 			{
-				if (oStream != null)
+				if (stream != null)
 				{
-					oStream.Dispose();
-					oStream = null;
+					stream.Dispose();
+					stream = null;
 				}
 			}
 		}

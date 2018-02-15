@@ -112,7 +112,5 @@
 		private System.Windows.Forms.Button saveButton;
 		private System.Windows.Forms.Button openButton;
 		private System.Windows.Forms.TextBox textTextBox;
-
-
 	}
 }
