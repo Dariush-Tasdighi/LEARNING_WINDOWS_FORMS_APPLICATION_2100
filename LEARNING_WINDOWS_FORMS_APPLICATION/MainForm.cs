@@ -11,7 +11,7 @@
 		{
 		}
 
-		private void saveButton_Click(object sender, System.EventArgs e)
+		private void SaveButton_Click(object sender, System.EventArgs e)
 		{
 			if (string.IsNullOrWhiteSpace(pathNameTextBox.Text))
 			{
@@ -25,7 +25,6 @@
 					System.Windows.Forms.MessageBoxOptions.RtlReading);
 
 				pathNameTextBox.Text = string.Empty;
-
 				pathNameTextBox.Focus();
 
 				return;
@@ -44,7 +43,7 @@
 
 				stream.Write(textTextBox.Text);
 
-				//oStream.Flush();
+				//stream.Flush();
 				stream.Close();
 
 				System.Windows.Forms.MessageBox.Show
@@ -70,7 +69,7 @@
 			}
 		}
 
-		private void openButton_Click(object sender, System.EventArgs e)
+		private void OpenButton_Click(object sender, System.EventArgs e)
 		{
 			if (string.IsNullOrWhiteSpace(pathNameTextBox.Text))
 			{
