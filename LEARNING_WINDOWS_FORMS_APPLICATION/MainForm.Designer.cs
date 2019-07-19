@@ -46,7 +46,7 @@
 			this.pathNameTextBox.Name = "pathNameTextBox";
 			this.pathNameTextBox.Size = new System.Drawing.Size(313, 23);
 			this.pathNameTextBox.TabIndex = 1;
-			this.pathNameTextBox.Text = "E:\\_TEMP\\Readme.txt";
+			this.pathNameTextBox.Text = "D:\\_TEMP\\Readme.txt";
 			// 
 			// saveButton
 			// 
