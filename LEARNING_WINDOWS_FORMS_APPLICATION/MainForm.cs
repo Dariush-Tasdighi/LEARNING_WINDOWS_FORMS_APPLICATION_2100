@@ -13,6 +13,7 @@
 
 		private void SaveButton_Click(object sender, System.EventArgs e)
 		{
+			// **************************************************
 			if (string.IsNullOrWhiteSpace(pathNameTextBox.Text))
 			{
 				System.Windows.Forms.MessageBox.Show
@@ -32,6 +33,7 @@
 
 			pathNameTextBox.Text =
 				pathNameTextBox.Text.Trim();
+			// **************************************************
 
 			System.IO.StreamWriter stream = null;
 
@@ -64,13 +66,14 @@
 				if (stream != null)
 				{
 					stream.Dispose();
-					stream = null;
+					//stream = null;
 				}
 			}
 		}
 
 		private void OpenButton_Click(object sender, System.EventArgs e)
 		{
+			// **************************************************
 			if (string.IsNullOrWhiteSpace(pathNameTextBox.Text))
 			{
 				System.Windows.Forms.MessageBox.Show
@@ -83,7 +86,6 @@
 					System.Windows.Forms.MessageBoxOptions.RtlReading);
 
 				pathNameTextBox.Text = string.Empty;
-
 				pathNameTextBox.Focus();
 
 				return;
@@ -91,7 +93,9 @@
 
 			pathNameTextBox.Text =
 				pathNameTextBox.Text.Trim();
+			// **************************************************
 
+			// **************************************************
 			if (System.IO.File.Exists(pathNameTextBox.Text) == false)
 			{
 				System.Windows.Forms.MessageBox.Show
@@ -107,6 +111,7 @@
 
 				return;
 			}
+			// **************************************************
 
 			System.IO.StreamReader stream = null;
 
@@ -138,7 +143,7 @@
 				if (stream != null)
 				{
 					stream.Dispose();
-					stream = null;
+					//stream = null;
 				}
 			}
 		}
